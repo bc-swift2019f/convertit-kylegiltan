@@ -17,6 +17,9 @@ class ViewController: UIViewController {
     
     var formulaArray = ["miles to kilometers","kilometers to miles","feet to meters", "yars to meters", "meters to feet", "meters to yards"]
     
+    var fromUnits = ""
+    var toUnits = ""
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -49,7 +52,12 @@ extension ViewController: UIPickerViewDelegate, UIPickerViewDataSource{
     }
     
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        let unitsArray = formulaArray[row].components(separatedBy: " to ")
+        fromUnits = unitsArray[0]
+        toUnits = unitsArray[1]
         fromUnitsLabel.text = formulaArray[row]
+        fromUnitsLabel.text = fromUnits
+        resultsLabel.text = toUnits
     }
     
 }
