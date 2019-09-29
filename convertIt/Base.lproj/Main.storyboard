@@ -26,6 +26,9 @@
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
+                                <connections>
+                                    <action selector="userInputChanged:" destination="BYZ-38-t0r" eventType="editingChanged" id="eVH-9l-psE"/>
+                                </connections>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="miles" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UY5-q2-zar">
                                 <rect key="frame" x="256" y="64" width="103" height="24"/>
@@ -87,18 +90,21 @@
                                     <segment title="-"/>
                                 </segments>
                                 <color key="tintColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <connections>
+                                    <action selector="signSegmentSelected:" destination="BYZ-38-t0r" eventType="valueChanged" id="yLX-xw-AnY"/>
+                                </connections>
                             </segmentedControl>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="nr7-ra-JJ0">
                                 <rect key="frame" x="37.333333333333343" y="444" width="300.33333333333326" height="28"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Rounding:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tlc-Hr-rPJ">
-                                        <rect key="frame" x="0.0" y="0.0" width="77.333333333333329" height="28"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Rounding:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tlc-Hr-rPJ">
+                                        <rect key="frame" x="0.0" y="0.0" width="73.333333333333329" height="28"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <segmentedControl opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="wtu-1I-EXa">
-                                        <rect key="frame" x="97.333333333333314" y="0.0" width="203" height="29"/>
+                                    <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="wtu-1I-EXa">
+                                        <rect key="frame" x="93.333333333333314" y="0.0" width="207" height="29"/>
                                         <segments>
                                             <segment title="0.0"/>
                                             <segment title="0.00"/>
@@ -150,6 +156,7 @@
                         <outlet property="formulaPicker" destination="xI6-q1-Phj" id="cPx-f1-fLI"/>
                         <outlet property="fromUnitsLabel" destination="UY5-q2-zar" id="0N9-K2-SsS"/>
                         <outlet property="resultsLabel" destination="R1J-1V-GpE" id="opE-iO-w8q"/>
+                        <outlet property="signedSegment" destination="GQj-te-P4s" id="7v4-7H-yWx"/>
                         <outlet property="userInput" destination="uB1-kv-tap" id="YrD-rB-tfa"/>
                     </connections>
                 </viewController>
